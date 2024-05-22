@@ -1,12 +1,13 @@
-import makeAbsolutePath from "../path.js";
 import fs from 'fs';
+import path from 'path';
+import parse from './parse.js';
 
-const genDiff = (filepath1, filepath2) => {
-  const firstFilePath = makeAbsolutePath(filepath1);
-  const secondFilePath = makeAbsolutePath(filepath2);
+const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
+const getFileType = (filepath) => path.extname(filepath).slice(1);
+const readFile = (filepath) => fs.readFileSync(filepath, 'utf-8');
+const dataParse = (filepath) => parse(filepath);
 
-  const readFirstFile = fs.readFileSync(firstFilePath, 'utf-8');
-  const readSecondFile = fs.readFileSync(secondFilePath, 'utf-8');
-};
+const genDiff = (filepath1, filepath2) => {};
 
 export default genDiff;
+

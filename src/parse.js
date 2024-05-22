@@ -1,3 +1,3 @@
-const parseJson = (jsonFile) => JSON.parse(jsonFile);
+const parse = (data) => JSON.parse(data);
 
-export default parseJson;
+export default parse;
