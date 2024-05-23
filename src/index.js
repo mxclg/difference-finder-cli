@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import parse from './parse.js';
+import compareFiles from './compare_files.js';
 
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
 const readFile = (filepath) => fs.readFileSync(filepath, 'utf-8');
@@ -16,7 +17,9 @@ const genDiff = (filepath1, filepath2) => {
   const getDataFile1 = parse(readFile1);
   const getDataFile2 = parse(readFile2);
 
-  return { getDataFile1, getDataFile2 };
+  const diffReport = compareFiles(getDataFile1, getDataFile2);
+
+  return diffReport;
 };
 
 export default genDiff;
