@@ -13,5 +13,5 @@ fix:
 test:
 	npm test
 
-cov:
-	npx jest --coverage
+test-coverage:
+	npm run coverage
