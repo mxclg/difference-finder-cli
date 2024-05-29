@@ -10,3 +10,8 @@ lint:
 fix:
 	npx eslint --fix .
 
+test:
+	npm test
+
+cov:
+	npx jest --coverage
