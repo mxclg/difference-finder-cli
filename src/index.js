@@ -5,7 +5,7 @@ import compareFiles from './compare_files.js';
 
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
 const readFile = (filepath) => fs.readFileSync(filepath, 'utf-8');
-const getFileType = (filepath) => path.extname(filepath).slice(1);
+// const getFileType = (filepath) => path.extname(filepath).slice(1);
 
 const genDiff = (filepath1, filepath2) => {
   const getAbsolutePathFile1 = getFilePath(filepath1);
