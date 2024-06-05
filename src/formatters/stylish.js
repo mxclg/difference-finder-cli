@@ -27,17 +27,17 @@ const getStylish = (tree) => {
     const bracketIndentation = getBrackeIndentation(depth);
     const strings = currentValue.flatMap((node) => {
       const {
-        type, key, children, value1, value2,
+        type, key, children, value, value1, value2,
       } = node;
       switch (type) {
         case 'nested':
           return `${currentIndentation}  ${key}: ${iter(children, depth + 1)}`;
         case 'removed':
-          return `${currentIndentation}- ${key}: ${stringify(value1, depth + 1)}`;
+          return `${currentIndentation}- ${key}: ${stringify(value, depth + 1)}`;
         case 'added':
-          return `${currentIndentation}+ ${key}: ${stringify(value2, depth + 1)}`;
+          return `${currentIndentation}+ ${key}: ${stringify(value, depth + 1)}`;
         case 'unchanged':
-          return `${currentIndentation}  ${key}: ${stringify(value1, depth + 1)}`;
+          return `${currentIndentation}  ${key}: ${stringify(value, depth + 1)}`;
         case 'changed':
           return [
             `${currentIndentation}- ${key}: ${stringify(value1, depth + 1)}`,
