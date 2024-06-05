@@ -7,3 +7,5 @@
 [![asciicast video](https://asciinema.org/a/CkqSxg5FLT1sGb3jLAXv9Yu4b.svg)](https://asciinema.org/a/CkqSxg5FLT1sGb3jLAXv9Yu4b)
 ### Generate a diff report between two flat YAML files
 [![asciicast](https://asciinema.org/a/guv1xU8vxcDzaU8ajAck8wO0a.svg)](https://asciinema.org/a/guv1xU8vxcDzaU8ajAck8wO0a)
+### Generate a diff report between two nested files
+[![asciicast](https://asciinema.org/a/w6yY2jhNlcDMAbwTyTl0P7I1H.svg)](https://asciinema.org/a/w6yY2jhNlcDMAbwTyTl0P7I1H)
