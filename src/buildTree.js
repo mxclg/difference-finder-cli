@@ -17,16 +17,22 @@ const compareFiles = (data1, data2) => {
     const value2 = data2[key];
 
     if (Object.hasOwn(data1, key) && !Object.hasOwn(data2, key)) {
-      return `  - ${key}: ${value1}`;
-    } if (!Object.hasOwn(data1, key) && Object.hasOwn(data2, key)) {
-      return `  + ${key}: ${value2}`;
-    } if (value1 !== value2) {
-      return `  - ${key}: ${value1}\n  + ${key}: ${value2}`;
+      return { type: 'removed', key, value: value1 };
     }
-    return `    ${key}: ${value1}`;
+    if (!Object.hasOwn(data1, key) && Object.hasOwn(data2, key)) {
+      return { type: 'added', key, value: value2 };
+    }
+    if (_.isEqual(value1, value2)) {
+      return { type: 'unchanged', key, value: value1 };
+    }
+    if (_.isObject(value1) && _.isObject(value2)) {
+      return { type: 'nested', key, children: compareFiles(value1, value2) };
+    }
+    return {
+      type: 'changed', key, value1, value2,
+    };
   });
-  const diffReport = `{\n${result.join('\n')}\n}`;
-  return diffReport;
+  return result;
 };
 
 export default compareFiles;
