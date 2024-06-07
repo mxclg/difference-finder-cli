@@ -16,5 +16,3 @@ program
   });
 
 program.parse(process.argv);
-
-// gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json
