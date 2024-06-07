@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import parsingData from './parse.js';
 import compareFiles from './buildTree.js';
-import choiseFormat from './formatters/choosingFormat.js';
+import choiseFormat from './formatters/index.js';
 
 const getFilePath = (filepath) => path.resolve(process.cwd(), filepath);
 const readFile = (filepath) => fs.readFileSync(filepath, 'utf-8');
@@ -26,5 +26,4 @@ const genDiff = (filepath1, filepath2, format = 'stylish') => {
   return choiseFormat(diffReport, format);
 };
 
-// console.log(genDiff('__fixtures__/file1.json', '__fixtures__/file2.json'));
 export default genDiff;
