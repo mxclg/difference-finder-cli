@@ -10,7 +10,11 @@ program
   .option('-f, --format <type>', 'output format', 'stylish')
   .helpOption('-h, --help', 'output usage information')
   .action((filepath1, filepath2) => {
-    console.log(genDiff(filepath1, filepath2));
+    const options = program.opts().format;
+    const diffReport = genDiff(filepath1, filepath2, options);
+    console.log(diffReport);
   });
 
 program.parse(process.argv);
+
+// gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json
