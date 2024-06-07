@@ -9,3 +9,5 @@
 [![asciicast](https://asciinema.org/a/guv1xU8vxcDzaU8ajAck8wO0a.svg)](https://asciinema.org/a/guv1xU8vxcDzaU8ajAck8wO0a)
 ### Generate a diff report between two nested files
 [![asciicast](https://asciinema.org/a/w6yY2jhNlcDMAbwTyTl0P7I1H.svg)](https://asciinema.org/a/w6yY2jhNlcDMAbwTyTl0P7I1H)
+### Generate a diff report between two nested files in 'plain' format
+[![asciicast](https://asciinema.org/a/y3PhqJLa0ONkRY6bE8upSNClS.svg)](https://asciinema.org/a/y3PhqJLa0ONkRY6bE8upSNClS)
