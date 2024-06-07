@@ -28,3 +28,10 @@ test.each(files)('diff report in "plain" format', (file1, file2) => {
   const result = readFile('plainDiffReport.txt');
   expect(genDiff(filePath1, filePath2, 'plain')).toEqual(result);
 });
+
+test.each(files)('diff report in "json" format', (file1, file2) => {
+  const filePath1 = getFixturePath(file1);
+  const filePath2 = getFixturePath(file2);
+  const result = readFile('jsonDiffReport.txt');
+  expect(genDiff(filePath1, filePath2, 'json')).toEqual(result);
+});
