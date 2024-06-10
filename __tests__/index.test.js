@@ -15,6 +15,13 @@ const files = [
   ['file1.yaml', 'file2.yaml'],
   ['file1.yml', 'file2.yml'],
 ];
+test.each(files)('diff report with default format', (file1, file2) => {
+  const filePath1 = getFixturePath(file1);
+  const filePath2 = getFixturePath(file2);
+  const result = readFile('stylishDiffReport.txt');
+  expect(genDiff(filePath1, filePath2)).toEqual(result);
+});
+
 test.each(files)('diff report in "stylish" format', (file1, file2) => {
   const filePath1 = getFixturePath(file1);
   const filePath2 = getFixturePath(file2);
