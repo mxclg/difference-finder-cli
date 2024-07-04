@@ -4,16 +4,18 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/423b05ab8208d9ea52a6/test_coverage)](https://codeclimate.com/github/mxclg/frontend-project-46/test_coverage)
 ---
 # Difference Finder
-It's a program that determines the difference between two data structures. This is a common task for which there are numerous online services, for example, http://www.jsondiff.com/. This mechanism is used when outputting tests or tracking changes in configuration files.
+
+It's a program that determines the difference between two data structures. This is a common task for which there are numerous online services, such as [jsondiff.com](http://www.jsondiff.com/). This mechanism is useful for outputting tests or tracking changes in configuration files.
 
 **Utility Features:**
+
 - Support for different input formats: YAML, JSON
-- Output in plain text, stylish, and JSON format
+- Output in 'plain', 'stylish', and JSON formats
 
-### Требования
-Установленный  [node.js](https://nodejs.org/en). Если он не установлен, используйте [инструкцию по установке](https://github.com/Hexlet/ru-instructions/blob/main/nodejs.md). Проверить версию node.js возможно командой `node -v`.
+### Requirements
+You need to have [node.js](https://nodejs.org/en) installed. If it's not installed, use the [installation guide](https://github.com/Hexlet/ru-instructions/blob/main/nodejs.md). To check your node.js version, use the command `node -v`.
 
-### How to use
+### Installation and Preparing
  1. Clone the repository:
 ```
 git clone https://github.com/mxclg/difference-finder-cli
@@ -29,6 +31,25 @@ npm install
 4.	Link the package locally:
 ```
 npm link
+```
+### How to use
+```
+# Run
+gendiff [options] <filepath1> <filepath2>
+
+# Example
+gendiff --format plain __fixtures__/file1.json __fixtures__/file2.json
+
+# For more details run...
+gendiff -h
+
+# and you'll see =>
+Usage: gendiff [options] <filepath1> <filepath2>
+Compares two configuration files and shows a difference.
+Options:
+  -V, --version        output the version number
+  -f, --format <type>  output format (default: "stylish")
+  -h, --help           output usage information
 ```
 
 ### Demonstration
