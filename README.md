@@ -33,17 +33,21 @@ npm install
 npm link
 ```
 ### How to use
+
+Run
 ```
-# Run
 gendiff [options] <filepath1> <filepath2>
-
-# Show help
+```
+Show help
+```
 gendiff -h
-
-# Example usage
+```
+Example usage
+```
 gendiff --format plain file1.json file2.json
-
-# and you'll see =>
+```
+and you'll see =>
+```
 Usage: gendiff [options] <filepath1> <filepath2>
 Compares two configuration files and shows a difference.
 Options:
