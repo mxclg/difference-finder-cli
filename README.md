@@ -7,7 +7,15 @@
 
 A CLI tool that finds differences between two configuration files or data structures. This is a common task for which there are numerous online services, such as [jsondiff.com](http://www.jsondiff.com/). Useful for testing, debugging, or tracking changes in config files.
 
-**Utility Features:**
+### Stack
+
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=000)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=fff)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=fff)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=fff)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=fff)
+
+### Utility Features
 
 - Support for different input formats: YAML, JSON
 - Output in `plain`, `stylish`, and `JSON` formats
